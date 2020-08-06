@@ -9,6 +9,7 @@ API_URL = "http://api.openweathermap.org/data/2.5/weather"
 
 
 def print_weather(weather):  #Добавил комет для курса про git
+    # dВторой коментарий для git
     try:
         city = weather['name']
         country = weather['sys'], ['country']
