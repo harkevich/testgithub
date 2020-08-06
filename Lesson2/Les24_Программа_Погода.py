@@ -8,7 +8,7 @@ API_KEY = "cc5486a49557f82fae1088dcc746387f"
 API_URL = "http://api.openweathermap.org/data/2.5/weather"
 
 
-def print_weather(weather):
+def print_weather(weather):  #Добавил комет для курса про git
     try:
         city = weather['name']
         country = weather['sys'], ['country']
