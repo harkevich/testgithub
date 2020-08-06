@@ -12,7 +12,25 @@ def print_weather(weather):  #Добавил комет для курса про
     # dВторой коментарий для git
     # 3 коментарий для git
 
-
+    try:
+        city = weather['name']
+        country = weather['sys'], ['country']
+        temp = weather['main'], ['temp']
+        press = weather['main'], ['pressure']
+        humidity = weather['main'], ['humidity']
+        wind = weather['wind'], ['speed']
+        desc = weather['weather'], [0], ['description']
+        sunrise_ts = weather['sys'], ['sunrise']
+        sunset_ts = weather['sys'], ['sunset']
+        sunrise_struct_time = time.localtime(sunrise_ts)
+        sunset_struct_time = time.localtime(sunset_ts)
+        sunrise = time.strftime('%H:%M:%S', sunrise_struct_time)
+        sunset = time.strftime('%H:%M:%S', sunset_struct_time)
+        return (f"Местоположение: {city}, {country} \nТемпература: {temp} °C  \nАтм.давление: "
+                f"{press} гПа \nВлажность: {humidity}% \nСкорость ветра: {wind} м/с \n погодные "
+                f"условия: {desc} \nВосход: {sunrise} \nЗакат: {sunset} ")
+    except:
+        return "Ошибка получение данных..."
 
 
 def get_weather(event=''):
