@@ -20,3 +20,5 @@ print(tekst, "tekst2!!!blabla!!!")
 строчный 
 комментарий 
 """
+
+print(tekst)
